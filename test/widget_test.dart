@@ -22,6 +22,13 @@ void main() {
         {'category': 'Food', 'spent': 100},
         {'category': 'Transport', 'spent': 25.5},
       ],
+      'month': '2026-10',
+      'charts': {
+        'daily': [
+          {'day': 1, 'total': 15.5},
+          {'day': 2, 'total': 0},
+        ],
+      },
     });
 
     expect(dashboard.totalSpent, 125.5);
@@ -30,6 +37,9 @@ void main() {
       'Food': 100,
       'Transport': 25.5,
     });
+    expect(dashboard.dailySpend.first.date, '2026-10-01');
+    expect(dashboard.dailySpend.first.amount, 15.5);
+    expect(dashboard.dailySpend.last.amount, 0);
   });
 
   testWidgets('Splash screen displays Finora branding', (

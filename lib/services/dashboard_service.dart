@@ -9,11 +9,23 @@ class DashboardService {
 
   Future<DashboardModel> getDashboard({String? month}) async {
     try {
-      final res = await _dio.get(
-        ApiConstants.dashboard,
-        queryParameters: {if (month != null) 'month': month},
-      );
-      return DashboardModel.fromJson(res.data);
+      final queryParameters = {if (month != null) 'month': month};
+      final responses = await Future.wait([
+        _dio.get(
+          ApiConstants.dashboard,
+          queryParameters: queryParameters,
+        ),
+        _dio.get(
+          ApiConstants.reports,
+          queryParameters: queryParameters,
+        ),
+      ]);
+      final dashboardData = Map<String, dynamic>.from(responses[0].data);
+      final reportsData = Map<String, dynamic>.from(responses[1].data);
+      dashboardData['charts'] = reportsData['charts'];
+      dashboardData['month'] ??= reportsData['month'];
+
+      return DashboardModel.fromJson(dashboardData);
     } on DioException catch (e) {
       throw _handleError(e);
     }

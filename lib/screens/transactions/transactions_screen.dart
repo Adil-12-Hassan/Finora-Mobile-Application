@@ -246,7 +246,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
   }
 }
 
-// ─── Month Selector ────────────────────────────────────────────────────────────
+//  Month Selector 
 
 class _MonthSelector extends StatelessWidget {
   final String month;
@@ -330,7 +330,7 @@ class _MonthSelector extends StatelessWidget {
   }
 }
 
-// ─── Expense Card ──────────────────────────────────────────────────────────────
+//  Expense Card 
 
 class _ExpenseCard extends StatelessWidget {
   final ExpenseModel expense;
@@ -477,7 +477,7 @@ class _ExpenseCard extends StatelessWidget {
   }
 }
 
-// ─── Empty State ───────────────────────────────────────────────────────────────
+//  Empty State ─
 
 class _EmptyState extends StatelessWidget {
   final String category;

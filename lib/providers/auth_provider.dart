@@ -1,8 +1,6 @@
 import 'package:flutter/foundation.dart';
-
 import '../models/user_model.dart';
 import '../services/auth_service.dart';
-
 enum AuthStatus { unknown, authenticated, unauthenticated }
 
 class AuthProvider extends ChangeNotifier {

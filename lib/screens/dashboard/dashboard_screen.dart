@@ -157,7 +157,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   }
 }
 
-// ─── Header ───────────────────────────────────────────────────────────────────
+//  Header ──
 
 class _Header extends StatelessWidget {
   final String userName;
@@ -220,7 +220,7 @@ class _Header extends StatelessWidget {
   }
 }
 
-// ─── Budget Ring Card ──────────────────────────────────────────────────────────
+//  Budget Ring Card ─
 
 class _BudgetRingCard extends StatelessWidget {
   final DashboardModel dashboard;
@@ -378,7 +378,7 @@ class _RingLegend extends StatelessWidget {
   }
 }
 
-// ─── Stats Row ─────────────────────────────────────────────────────────────────
+//  Stats Row 
 
 class _StatsRow extends StatelessWidget {
   final DashboardModel dashboard;
@@ -473,7 +473,7 @@ class _StatCard extends StatelessWidget {
   }
 }
 
-// ─── Category Chart ────────────────────────────────────────────────────────────
+//  Category Chart 
 
 class _CategoryChart extends StatelessWidget {
   final DashboardModel dashboard;
@@ -550,7 +550,7 @@ class _CategoryChart extends StatelessWidget {
   }
 }
 
-// ─── Expense Item ──────────────────────────────────────────────────────────────
+//  Expense Item 
 
 class _ExpenseItem extends StatelessWidget {
   final ExpenseModel expense;
@@ -648,7 +648,7 @@ class _ExpenseItem extends StatelessWidget {
   }
 }
 
-// ─── Section Title ─────────────────────────────────────────────────────────────
+//  Section Title ─
 
 class _SectionTitle extends StatelessWidget {
   final String    title;
@@ -679,7 +679,7 @@ class _SectionTitle extends StatelessWidget {
   }
 }
 
-// ─── Empty / Error States ──────────────────────────────────────────────────────
+//  Empty / Error States 
 
 class _EmptyExpenses extends StatelessWidget {
   const _EmptyExpenses();

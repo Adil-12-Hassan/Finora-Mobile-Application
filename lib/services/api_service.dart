@@ -18,12 +18,8 @@ class ApiService {
     dio = Dio(
       BaseOptions(
         baseUrl: ApiConstants.baseUrl,
-        connectTimeout: const Duration(
-          milliseconds: ApiConstants.connectTimeout,
-        ),
-        receiveTimeout: const Duration(
-          milliseconds: ApiConstants.receiveTimeout,
-        ),
+        connectTimeout: const Duration(seconds: 30),
+        receiveTimeout: const Duration(seconds: 30),
         contentType: 'application/json',
         responseType: ResponseType.json,
         extra: {if (kIsWeb) 'withCredentials': true},
